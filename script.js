@@ -1,212 +1,315 @@
-// if doir misollar
-// 1 - misol
-// Uygi-vazifa
-// 1 - misol
-// let year1 = prompt("Tug`ilgan yilingizni kiriting!");
-// let year2 = prompt("Tug`ilgan yilingizni kiriting!");
-// let email = prompt("email kiriting!")
-// let married = prompt("Oila qurganmisiz! Ha yoki Yo`q");
-// function Users(name, year, married, email){
-//   this.name = name;
-//   this.year = year;
-//   this.email = email;
-//   this.married = married;
-//   this.calc = function() {
-//     return 2024 - this.year
-//   }
-//   this.x = function(){
-//     if(married == "Ha"){
-//       return true;
-//     }else{
-//       return false;
+// string orasidagi probellarni yoq qilish
+
+// let str = "salom salom salom";
+// const x = (value) => {
+//     new_str = [];
+//     for (let i of value) {
+//         if (i != " ") {
+//             new_str += i;
+//         }
 //     }
-//   }
-// }
-// const user1 = new Users("Fayruzber", year1, email, married);
-// console.log(user1);
-// console.log(user1.calc());
-// console.log(user1.x());
 
-// 2 - misol
-// let userCount = prompt("userlarni soni");
-// let result = [];
-
-// for (let i = 0; i < userCount; i++) {
-//   let obj = {};
-//   let name = prompt("ismingiz");
-//   let age = prompt("yoshingiz");
-//   let id = prompt("id");
-//   obj.name = name;
-//   obj.age = age;
-//   obj.id = id;
-//   result.push(obj);
+//     return new_str;
 // }
+
+// console.log(x(str));
+
+
+// let arr = [1,3,2,44,8];
+
+// const x =(value) => {
+//     for (let i = 0; i < value.length; i++){
+//         if (value[i] % 2 == 0){
+//             return true;
+//         }
+//     }
+//     return false;
+// }
+
+// console.log(x(arr));    
+
+
+// let arr = [1, 3, 2, 44, 8];
+
+// const new_arr = arr.some(value => value % 2 === 0);
+
+// console.log(new_arr);
+
+
+// let str = "hello";
+
+// let result = str[str.length -2] + str[str.length -1];
+
+// console.log(result + result + result);
+
+// let s = "heldctfvgbhnjbg";
+// let a = prompt("sonni kirit");
+// let b = prompt("sonni kirit");
+// if (s.length != a + b) {
+//     console.log("hato");
+    
+// }
+// let new_1 = s.slice(0, a);
+// let new_2 = s.slice(s.length - b);
+// let result = new_1 + new_2;
+
 // console.log(result);
 
-// 3 - misol
-// Foydalanuvchi konstruktor funksiyasi
-// function User(name, age, location, sum) {
-//   this.name = name;
-//   this.age = age;
-//   this.location = location;
-//   this.sum = sum;
+
+
+
+
+// let str = "salom";
+// let result = ''
+
+//  for (let i = 0; i < str.length; i++){
+//     if (str.length % 2 != 0){
+
+//         console.log(str.split("")[2]);
+        
+//     }else{
+//         // console.log(res_1)
+        
+//     }
+//  }
+
+//  console.log(result);
+ 
+
+
+
+// uy ishi object
+// misol_1
+// function extra(obj) {
+//     let result = [];
+    
+//     function reverse(value) {
+//         if (typeof value === 'object' && value !== null) {
+//             result.push(value);
+            
+//             for (let key in value) {
+//                 if (value.hasOwnProperty(key)) {
+//                     reverse(value[key]);
+//                 }
+//             }
+//         }
+//     }
+    
+//     reverse(obj);
+    
+//     return result;
 // }
-// function calculSum(users) {
-//   let totalSum = 0;
-//   for (const user of users) {
-//       totalSum += user.sum;
-//   }
-//   return totalSum;
+
+// const exampleObject = {
+//     name: "John",
+//     details: {
+//         age: 30,
+//         address: {
+//             city: "New York",
+//             zip: "10001"
+//         }
+//     },
+//     hobbies: ["reading", "hiking"],
+//     friends: [
+//         { name: "Jane", age: 28 },
+//         { name: "Doe", age: 35 }
+//     ]
+// };
+
+
+
+
+// const nestedObjects = extra(exampleObject);
+// console.log(nestedObjects);
+
+
+// misol_2
+// function extra(arr) {
+//     let result = [];
+    
+//     arr.forEach(item => {
+//         if (typeof item === 'object' && item !== null) {
+//             result.push(item);
+//         }
+//     });
+    
+//     return result;
 // }
-// const users = [
-//   new User('Ali', 30, 'Tashkent', 50000),
-//   new User('Vali', 28, 'Samarkand', 60000),
-//   new User('Sami', 35, 'Bukhara', 55000)
+
+// const arrays = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     "string", 123, [1, 2, 3],
+//     { name: "Charlie", age: 35 },
+//     null,
+//     { name: "Diana", age: 28 }
 // ];
-// const totalSum = calculSum(users);
-// console.log('Umumiy maosh:', totalSum);
 
-
-// obyekt
-// 1 - misol
-// 1-misol   17, 5
-// function num(n, m) {
-//   let sum = 0;
-//   let ren = n;
-// //        17    5
-//   while (ren >= m) {
-//     sum++;
-//     ren -= m;
-//   }
-//   return { sum, ren };
-// }
-// let n = 17;
-// let m = 5;
-
-// let result = num(n, m);
-// console.log(`Butun qism: ${result.sum}`);
-// console.log(`Qoldiq: ${result.ren}`);
+// const obb_arr = extra(arrays);
+// console.log(obb_arr);
 
 
 
-// 2-misol
-// function reverseDigits(n) {
-//   let reversedNumber = 0;
+// misol_3
+// const arrays = [
+//     { name: "Alice", age: 25 },
+//     { name: "Bob", age: 30 },
+//     { name: "Charlie", age: 35 },
+//     { name: "Diana", age: 28 }
+// ];
 
-//   while (n > 0) {
-//     // Qoldiqni olish (oxirgi raqamni olish)
-//     let digit = n % 10;
-
-//     // Teskari tartibda raqamlarni qo'shish
-//     reversedNumber = reversedNumber * 10 + digit;
-
-//     // Butun qismini olish (oxirgi raqamni olib tashlash)
-//     n = Math.floor(n / 10);
-//   }
-
-//   return reversedNumber;
+// function extra(arr, key) {
+//     return arr
+//         .map(item => item[key])     
+//         .filter(value => value !== undefined); 
 // }
 
-// // Test qilish
-// let n = 345; // O'zgaruvchini sinab ko'rish uchun boshqa qiymatni qo'ying
-// let reversed = reverseDigits(n);
-// console.log(`Teskari tartibda raqamlar: ${reversed}`);
+// const ages = extra(arrays, 'age');
+// console.log(ages); 
 
-// 3-misol
-// function sumAndCountDigits(n) {
-//   let sum = 0;
-//   let count = 0;
+// const names = extra(arrays, 'name');
+// console.log(names); 
 
-//   while (n > 0) {
-//     // Qoldiqni olish (oxirgi raqamni olish)
-//     let digit = n % 10;
-    
-//     // Raqamlar yig'indisini hisoblash
-//     sum += digit;
-    
-//     // Raqamlar sonini oshirish
-//     count++;
-    
-//     // Butun qismini olish (oxirgi raqamni olib tashlash)
-//     n = Math.floor(n / 10);
-//   }
 
-//   return { sum, count };
+// misol_4
+// const nes_arr = [
+//     [
+//         { name: "Alice", age: 25 },
+//         { name: "Bob", age: 18 }
+//     ],
+//     [
+//         { name: "Charlie", age: 30 },
+//         { name: "Diana", age: 22 }
+//     ],
+//     [
+//         { name: "Eve", age: 19 },
+//         { name: "Frank", age: 35 }
+//     ]
+// ];
+
+// function extra(arr, min_arr) {
+//     return arr
+//         .flatMap(in_arr => in_arr)
+//         .filter(user => user.age > min_arr);
 // }
 
-// // Test qilish
-// let n = 532; // O'zgaruvchini sinab ko'rish uchun boshqa qiymatni qo'ying
-// let result = sumAndCountDigits(n);
-// console.log(`Raqamlar yig'indisi: ${result.sum}`);
-// console.log(`Raqamlar soni: ${result.count}`);
+// const user_20 = extra(nes_arr, 20);
+// console.log(user_20);
 
 
-// 4-misol
-// function containsDigitTwo(n) {
-//   while (n > 0) {
-//     // Qoldiqni olish (oxirgi raqamni olish)
-//     let digit = n % 10;
+// const matn = "   qonday   ";
+// const clear = matn.trim();
 
-//     // Agar raqam 2 bo'lsa, haqiqatni qaytarish
-//     if (digit === 2) {
-//       return true;
+// console.log(clear);
+
+// function arr(str) {
+//     let result = '';
+//     let res = false;
+
+//     for (let i = 0; i < str.length; i++) {
+//         const char = str[i];
+
+//         if (res && char >= 'a' && char <= 'z') {
+//             result += char.toUpperCase();
+//             res = false;
+//         } else {
+//             result += char;
+//         }
+        
+//         if (char >= 'A' && char <= 'Z') {
+//             res = true;
+//         }
 //     }
 
-//     // Butun qismini olish (oxirgi raqamni olib tashlash)
-//     n = Math.floor(n / 10);
-//   }
-
-//   // Agar raqam 2 topilmasa, yolg'on qaytarish
-//   return false;
+//     return result;
 // }
 
-// // Test qilish
-// let n = 347; // O'zgaruvchini sinab ko'rish uchun boshqa qiymatni qo'ying
-// let hasTwo = containsDigitTwo(n);
-// console.log(`Raqamlar orasida 2 raqami bor: ${hasTwo}`);
+// console.log(arr('hello World! This is A test.'));
 
 
-// 5-misol
-// function containsOddDigit(n) {
-//   while (n > 0) {
-//     // Qoldiqni olish (oxirgi raqamni olish)
-//     let digit = n % 10;
+// uy ishi string
+// misol_1
+// let arr = [2, 3, 5, 6, 1, 8, 12];
+// let min = arr[0];
+// let max = arr[0];
 
-//     // Agar raqam toq bo'lsa, haqiqatni qaytarish
-//     if (digit % 2 !== 0) {
-//       return true;
+// function x (value) {
+//     for (let i = 0; i < value.length; i++) {
+//         if (value[i] > max) {
+//             max = value[i];
+//         }
+
+//         if (value[i] < min) {
+//             min = value[i];
+//         }
+//     }
+//     return { max , min }
+// }
+
+// console.log(x(arr));
+
+
+
+// misol_2
+// let arr = [1,2,4,4,5,2,4,7,8,9];
+// const count = [];
+
+// const x = (value) => {
+//     for (let i = 0; i < value.length; i++){
+//         if (value[i] > 2){
+//             count.push(value[i])
+
+//         }
+//     }
+//     return count;
+// }
+
+// console.log(x(arr));
+
+// misol_3
+// let arr = [2,3,6,6,7,7,88,31,9];
+// let even_number = 0;
+// let add_number = 0;
+
+// const x = (value) => {
+//     for (let i = 0; i < value.length; i++){
+//         if (value[i] % 2 == 0){
+//             even_number +=1;
+//         }else{
+//             add_number +=1;
+//         }
+//     }
+//     return {even_number,add_number};
+// }
+
+// console.log(x(arr));
+
+
+// misol_4
+// const x = (number) => {
+//     let count = 0;
+//     for (let i = 0; i < number.length; i++){
+//         count += number[i];
 //     }
 
-//     // Butun qismini olish (oxirgi raqamni olib tashlash)
-//     n = Math.floor(n / 10);
-//   }
-
-//   // Agar toq raqam topilmasa, yolg'on qaytarish
-//   return false;
+//     return count;
 // }
 
-// // Test qilish
-// let n = 2468; // O'zgaruvchini sinab ko'rish uchun boshqa qiymatni qo'ying
-// let hasOdd = containsOddDigit(n);
-// console.log(`Raqamlar orasida toq raqamlar bor: ${hasOdd}`);
+// let arr = [2,4,7,8,99,9];
+// console.log(x(arr));
 
 
-// 6-misol
-// function isPrime(n) {
-//   if (n <= 1) return false; // 1 yoki undan kichik sonlar tub emas
-//   if (n === 2) return true; // 2 tub sondir (yagona juft tub son)
-//   if (n % 2 === 0) return false; // Juft sonlar (2dan boshqa) tub emas
-
-//   for (let i = 3; i * i <= n; i += 2) {
-//     if (n % i === 0) {
-//       return false; // Agar n i ga bo'linadigan bo'lsa, tub emas
-//     }
-//   }
-  
-//   return true; // Agar hech qanday bo'linuvchi topilmasa, tub
+// misol_5
+// function value(obj) {
+//     return Object.values(obj)
 // }
 
-// // Test qilish
-// let n = 2; // O'zgaruvchini sinab ko'rish uchun boshqa qiymatni qo'ying
-// let result = isPrime(n);
-// console.log(`${n} soni tub: ${result}` && `${n} soni tub emas: ${result}`);
+// function keys(obj) {
+//     return Object.keys(obj)
+// }
+
+// let obj = { name: 'Muhammadali', age: 20, id: 3 }
+
+// console.log(value(obj));
+// console.log(keys(obj));
+
